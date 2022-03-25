@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using TestWebApi.IRepository;
 using TestWebApi.Models;
 
 namespace TestWebApi.Controllers
@@ -14,22 +15,52 @@ namespace TestWebApi.Controllers
     [ApiController]
     public class UsersController : ControllerBase
     {
-        private readonly UserDbContext _context;
+        private readonly IUserRepository UserRepo;
+
+        public UsersController(IUserRepository UserRepo)
+        {
+            this.UserRepo = UserRepo;
+        }
+        /* private readonly UserDbContext _context;
 
         public UsersController(UserDbContext context)
         {
             _context = context;
         }
-
-        // GET: api/Users
+        */
+        // GET: api/AllUsers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<User>>> GetUsers()
         {
-            return await _context.Users.ToListAsync();
+            //return await _context.Users.ToListAsync();
+            var result = await UserRepo.GetAllUser();
+            return Ok(result);
         }
 
+        //Post: api/Users/Add User
+        [HttpPost]
+        public async Task<ActionResult> AddUser(User User)
+        {
+            var result = await UserRepo.AddUser(User);
+            return Ok(result);
+        }
+        //Put: api/Users/user
+        [HttpPut("{id}")]
+        public async Task<ActionResult> UpdateUser(User user)
+        {
+            var result = await UserRepo.EditUser(user);
+            return Ok(result);
+        }
+
+        //Delete: api/Users/user
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> DeleteUser(User user)
+        {
+            var result = await UserRepo.DeleteUser(user);
+            return Ok(result);
+        }
         // GET: api/Users/5
-        [HttpGet("{id}")]
+        /*[HttpGet("{id}")]
         public async Task<ActionResult<User>> GetUser(int id)
         {
             var user = await _context.Users.FindAsync(id);
@@ -103,6 +134,6 @@ namespace TestWebApi.Controllers
         private bool UserExists(int id)
         {
             return _context.Users.Any(e => e.userId == id);
-        }
+        } */
     }
 }
