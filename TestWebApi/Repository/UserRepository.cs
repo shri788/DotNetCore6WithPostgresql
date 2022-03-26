@@ -7,14 +7,19 @@ namespace TestWebApi.Repository
     public class UserRepository: IUserRepository
     {
         private readonly UserDbContext context;
+        private readonly ILogger<UserRepository> logger;
 
-        public UserRepository(UserDbContext context)
+        public UserRepository(UserDbContext context, ILogger<UserRepository> logger)
         {
             this.context = context;
+
+            this.logger = logger;
         }
         public async Task<IEnumerable<User>> GetAllUser()
         {
-            return await context.Users.ToListAsync();
+            var result = await context.Users.ToListAsync();
+            logger.LogInformation("Get All Users Called!");
+            return result;
         }
 
         public async Task<User> AddUser(User user)

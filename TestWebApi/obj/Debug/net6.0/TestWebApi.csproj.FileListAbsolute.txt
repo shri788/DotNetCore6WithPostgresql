@@ -265,3 +265,15 @@ D:\dot net\TestWebApi\TestWebApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.
 D:\dot net\TestWebApi\TestWebApi\bin\Debug\net6.0\Npgsql.dll
 D:\dot net\TestWebApi\TestWebApi\bin\Debug\net6.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 D:\dot net\TestWebApi\TestWebApi\bin\Debug\net6.0\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
+D:\dot net\TestWebApi\TestWebApi\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+D:\dot net\TestWebApi\TestWebApi\bin\Debug\net6.0\Serilog.dll
+D:\dot net\TestWebApi\TestWebApi\bin\Debug\net6.0\Serilog.AspNetCore.dll
+D:\dot net\TestWebApi\TestWebApi\bin\Debug\net6.0\Serilog.Extensions.Hosting.dll
+D:\dot net\TestWebApi\TestWebApi\bin\Debug\net6.0\Serilog.Extensions.Logging.dll
+D:\dot net\TestWebApi\TestWebApi\bin\Debug\net6.0\Serilog.Formatting.Compact.dll
+D:\dot net\TestWebApi\TestWebApi\bin\Debug\net6.0\Serilog.Settings.Configuration.dll
+D:\dot net\TestWebApi\TestWebApi\bin\Debug\net6.0\Serilog.Sinks.Console.dll
+D:\dot net\TestWebApi\TestWebApi\bin\Debug\net6.0\Serilog.Sinks.Debug.dll
+D:\dot net\TestWebApi\TestWebApi\bin\Debug\net6.0\Serilog.Sinks.File.dll
+D:\dot net\TestWebApi\TestWebApi\bin\Debug\net6.0\Serilog.Sinks.PeriodicBatching.dll
+D:\dot net\TestWebApi\TestWebApi\bin\Debug\net6.0\Serilog.Sinks.PostgreSQL.dll

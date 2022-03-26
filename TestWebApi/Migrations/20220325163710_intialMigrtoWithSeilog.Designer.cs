@@ -11,8 +11,8 @@ using TestWebApi.Models;
 namespace TestWebApi.Migrations
 {
     [DbContext(typeof(UserDbContext))]
-    [Migration("20220324151858_initialMigration")]
-    partial class initialMigration
+    [Migration("20220325163710_intialMigrtoWithSeilog")]
+    partial class intialMigrtoWithSeilog
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

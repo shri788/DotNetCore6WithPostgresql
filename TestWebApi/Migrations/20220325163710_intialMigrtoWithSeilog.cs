@@ -5,7 +5,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace TestWebApi.Migrations
 {
-    public partial class initialMigration : Migration
+    public partial class intialMigrtoWithSeilog : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

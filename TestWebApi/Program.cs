@@ -1,9 +1,16 @@
 using Microsoft.EntityFrameworkCore;
+using Serilog;
 using TestWebApi.IRepository;
 using TestWebApi.Models;
 using TestWebApi.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
+
+var logger = new LoggerConfiguration().ReadFrom.Configuration(builder.Configuration)
+    .Enrich.FromLogContext().CreateLogger();
+
+//builder.Logging.ClearProviders();
+builder.Logging.AddSerilog(logger);
 
 // Add services to the container.
 
