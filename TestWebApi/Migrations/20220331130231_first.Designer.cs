@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using TestWebApi.Models;
@@ -11,9 +12,10 @@ using TestWebApi.Models;
 namespace TestWebApi.Migrations
 {
     [DbContext(typeof(UserDbContext))]
-    partial class UserDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220331130231_first")]
+    partial class first
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -44,43 +46,6 @@ namespace TestWebApi.Migrations
                     b.HasIndex("StudentId");
 
                     b.ToTable("Grades");
-                });
-
-            modelBuilder.Entity("TestWebApi.Models.Kid", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("KidName")
-                        .HasColumnType("text");
-
-                    b.Property<int?>("PersonId")
-                        .HasColumnType("integer");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("PersonId");
-
-                    b.ToTable("Kids");
-                });
-
-            modelBuilder.Entity("TestWebApi.Models.Person", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Name")
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Persons");
                 });
 
             modelBuilder.Entity("TestWebApi.Models.Student", b =>
@@ -122,18 +87,6 @@ namespace TestWebApi.Migrations
                         .HasForeignKey("StudentId");
 
                     b.Navigation("Student");
-                });
-
-            modelBuilder.Entity("TestWebApi.Models.Kid", b =>
-                {
-                    b.HasOne("TestWebApi.Models.Person", null)
-                        .WithMany("Kids")
-                        .HasForeignKey("PersonId");
-                });
-
-            modelBuilder.Entity("TestWebApi.Models.Person", b =>
-                {
-                    b.Navigation("Kids");
                 });
 
             modelBuilder.Entity("TestWebApi.Models.Student", b =>

@@ -1,0 +1,9 @@
+[2022-03-31 18:46:28.573 +05:30 INF]  Request starting HTTP/2 POST https://localhost:7097/api/Students application/json 35
+[2022-03-31 18:46:28.596 +05:30 INF]  Executing endpoint '"TestWebApi.Controllers.StudentsController.PostStudent (TestWebApi)"'
+[2022-03-31 18:46:28.700 +05:30 INF]  Route matched with "{action = \"PostStudent\", controller = \"Students\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TestWebApi.Models.Student]] PostStudent(TestWebApi.Models.Student)" on controller "TestWebApi.Controllers.StudentsController" ("TestWebApi").
+[2022-03-31 18:46:31.125 +05:30 INF]  Entity Framework Core "6.0.3" initialized '"UserDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f"' with options: "None"
+[2022-03-31 18:46:32.463 +05:30 INF]  Executed DbCommand ("183"ms) [Parameters=["@p0='?'"], CommandType='"Text"', CommandTimeout='30']"\r\n""INSERT INTO \"Students\" (\"Name\")\r\nVALUES (@p0)\r\nRETURNING \"Id\";"
+[2022-03-31 18:46:32.623 +05:30 INF]  Executing "CreatedAtActionResult", writing value of type '"TestWebApi.Models.Student"'.
+[2022-03-31 18:46:32.685 +05:30 INF]  Executed action "TestWebApi.Controllers.StudentsController.PostStudent (TestWebApi)" in 3971.4286ms
+[2022-03-31 18:46:32.687 +05:30 INF]  Executed endpoint '"TestWebApi.Controllers.StudentsController.PostStudent (TestWebApi)"'
+[2022-03-31 18:46:32.701 +05:30 INF]  Request finished HTTP/2 POST https://localhost:7097/api/Students application/json 35 - 201 - application/json;+charset=utf-8 4128.2486ms

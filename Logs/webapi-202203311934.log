@@ -1,0 +1,20 @@
+[2022-03-31 19:34:21.847 +05:30 INF]  Now listening on: "https://localhost:7097"
+[2022-03-31 19:34:21.951 +05:30 INF]  Now listening on: "http://localhost:5097"
+[2022-03-31 19:34:21.969 +05:30 INF]  Application started. Press Ctrl+C to shut down.
+[2022-03-31 19:34:21.979 +05:30 INF]  Hosting environment: "Development"
+[2022-03-31 19:34:21.986 +05:30 INF]  Content root path: "D:\\dot net\\TestWebApi\\TestWebApi\\"
+[2022-03-31 19:34:23.285 +05:30 INF]  Request starting HTTP/2 GET https://localhost:7097/swagger/index.html - -
+[2022-03-31 19:34:24.074 +05:30 INF]  Request finished HTTP/2 GET https://localhost:7097/swagger/index.html - - - 200 - text/html;charset=utf-8 799.5600ms
+[2022-03-31 19:34:24.138 +05:30 INF]  Request starting HTTP/2 GET https://localhost:7097/_framework/aspnetcore-browser-refresh.js - -
+[2022-03-31 19:34:24.162 +05:30 INF]  Request finished HTTP/2 GET https://localhost:7097/_framework/aspnetcore-browser-refresh.js - - - 200 11978 application/javascript;+charset=utf-8 24.1880ms
+[2022-03-31 19:34:24.421 +05:30 INF]  Request starting HTTP/2 GET https://localhost:7097/swagger/v1/swagger.json - -
+[2022-03-31 19:34:24.757 +05:30 INF]  Request finished HTTP/2 GET https://localhost:7097/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 336.2918ms
+[2022-03-31 19:34:29.437 +05:30 INF]  Request starting HTTP/2 GET https://localhost:7097/api/People - -
+[2022-03-31 19:34:29.452 +05:30 INF]  Executing endpoint '"TestWebApi.Controllers.PeopleController.GetPersons (TestWebApi)"'
+[2022-03-31 19:34:29.483 +05:30 INF]  Route matched with "{action = \"GetPersons\", controller = \"People\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[TestWebApi.Models.Person]]] GetPersons()" on controller "TestWebApi.Controllers.PeopleController" ("TestWebApi").
+[2022-03-31 19:34:31.574 +05:30 INF]  Entity Framework Core "6.0.3" initialized '"UserDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f"' with options: "None"
+[2022-03-31 19:34:32.603 +05:30 INF]  Executed DbCommand ("118"ms) [Parameters=[""], CommandType='"Text"', CommandTimeout='30']"\r\n""SELECT p.\"Id\", p.\"Name\"\r\nFROM \"Persons\" AS p"
+[2022-03-31 19:34:32.739 +05:30 INF]  Executing "ObjectResult", writing value of type '"System.Collections.Generic.List`1[[TestWebApi.Models.Person, TestWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+[2022-03-31 19:34:32.767 +05:30 INF]  Executed action "TestWebApi.Controllers.PeopleController.GetPersons (TestWebApi)" in 3266.5941ms
+[2022-03-31 19:34:32.769 +05:30 INF]  Executed endpoint '"TestWebApi.Controllers.PeopleController.GetPersons (TestWebApi)"'
+[2022-03-31 19:34:32.782 +05:30 INF]  Request finished HTTP/2 GET https://localhost:7097/api/People - - - 200 - application/json;+charset=utf-8 3345.4674ms

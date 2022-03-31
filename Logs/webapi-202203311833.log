@@ -1,0 +1,5 @@
+[2022-03-31 18:33:56.140 +05:30 INF]  Now listening on: "https://localhost:7097"
+[2022-03-31 18:33:56.280 +05:30 INF]  Now listening on: "http://localhost:5097"
+[2022-03-31 18:33:56.339 +05:30 INF]  Application started. Press Ctrl+C to shut down.
+[2022-03-31 18:33:56.355 +05:30 INF]  Hosting environment: "Development"
+[2022-03-31 18:33:56.374 +05:30 INF]  Content root path: "D:\\dot net\\TestWebApi\\TestWebApi\\"

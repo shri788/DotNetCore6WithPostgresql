@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Serilog;
+using System.Text.Json.Serialization;
 using TestWebApi.IRepository;
 using TestWebApi.Models;
 using TestWebApi.Repository;
@@ -14,7 +15,9 @@ builder.Logging.AddSerilog(logger);
 
 // Add services to the container.
 
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddJsonOptions(c =>
+            c.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
+
 builder.Services.AddDbContext<UserDbContext>(opt =>
             opt.UseNpgsql(builder.Configuration.GetConnectionString("sqlServerConnection")));
 builder.Services.AddScoped<IUserRepository, UserRepository>();

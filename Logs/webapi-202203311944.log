@@ -1,0 +1,11 @@
+[2022-03-31 19:44:47.130 +05:30 INF]  Now listening on: "https://localhost:7097"
+[2022-03-31 19:44:47.253 +05:30 INF]  Now listening on: "http://localhost:5097"
+[2022-03-31 19:44:47.274 +05:30 INF]  Application started. Press Ctrl+C to shut down.
+[2022-03-31 19:44:47.298 +05:30 INF]  Hosting environment: "Development"
+[2022-03-31 19:44:47.303 +05:30 INF]  Content root path: "D:\\dot net\\TestWebApi\\TestWebApi\\"
+[2022-03-31 19:44:48.697 +05:30 INF]  Request starting HTTP/2 GET https://localhost:7097/swagger/index.html - -
+[2022-03-31 19:44:49.330 +05:30 INF]  Request finished HTTP/2 GET https://localhost:7097/swagger/index.html - - - 200 - text/html;charset=utf-8 640.5135ms
+[2022-03-31 19:44:49.385 +05:30 INF]  Request starting HTTP/2 GET https://localhost:7097/_framework/aspnetcore-browser-refresh.js - -
+[2022-03-31 19:44:49.392 +05:30 INF]  Request finished HTTP/2 GET https://localhost:7097/_framework/aspnetcore-browser-refresh.js - - - 200 11978 application/javascript;+charset=utf-8 6.6554ms
+[2022-03-31 19:44:49.706 +05:30 INF]  Request starting HTTP/2 GET https://localhost:7097/swagger/v1/swagger.json - -
+[2022-03-31 19:44:49.987 +05:30 INF]  Request finished HTTP/2 GET https://localhost:7097/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 280.8296ms

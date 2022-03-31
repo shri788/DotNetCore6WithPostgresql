@@ -1,0 +1,21 @@
+[2022-03-31 19:12:07.686 +05:30 INF]  Now listening on: "https://localhost:7097"
+[2022-03-31 19:12:07.776 +05:30 INF]  Now listening on: "http://localhost:5097"
+[2022-03-31 19:12:07.793 +05:30 INF]  Application started. Press Ctrl+C to shut down.
+[2022-03-31 19:12:07.796 +05:30 INF]  Hosting environment: "Development"
+[2022-03-31 19:12:07.799 +05:30 INF]  Content root path: "D:\\dot net\\TestWebApi\\TestWebApi\\"
+[2022-03-31 19:12:09.940 +05:30 INF]  Request starting HTTP/2 GET https://localhost:7097/swagger/index.html - -
+[2022-03-31 19:12:10.622 +05:30 INF]  Request finished HTTP/2 GET https://localhost:7097/swagger/index.html - - - 200 - text/html;charset=utf-8 688.2873ms
+[2022-03-31 19:12:10.693 +05:30 INF]  Request starting HTTP/2 GET https://localhost:7097/_framework/aspnetcore-browser-refresh.js - -
+[2022-03-31 19:12:10.705 +05:30 INF]  Request finished HTTP/2 GET https://localhost:7097/_framework/aspnetcore-browser-refresh.js - - - 200 11978 application/javascript;+charset=utf-8 17.4824ms
+[2022-03-31 19:12:10.982 +05:30 INF]  Request starting HTTP/2 GET https://localhost:7097/swagger/v1/swagger.json - -
+[2022-03-31 19:12:11.353 +05:30 INF]  Request finished HTTP/2 GET https://localhost:7097/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 370.7534ms
+[2022-03-31 19:12:48.769 +05:30 INF]  Request starting HTTP/2 POST https://localhost:7097/api/People application/json 160
+[2022-03-31 19:12:48.783 +05:30 INF]  Executing endpoint '"TestWebApi.Controllers.PeopleController.PostPerson (TestWebApi)"'
+[2022-03-31 19:12:48.857 +05:30 INF]  Route matched with "{action = \"PostPerson\", controller = \"People\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TestWebApi.Models.Person]] PostPerson(TestWebApi.Models.Person)" on controller "TestWebApi.Controllers.PeopleController" ("TestWebApi").
+[2022-03-31 19:12:50.993 +05:30 INF]  Entity Framework Core "6.0.3" initialized '"UserDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f"' with options: "None"
+[2022-03-31 19:12:52.313 +05:30 INF]  Executed DbCommand ("162"ms) [Parameters=["@p0='?'"], CommandType='"Text"', CommandTimeout='30']"\r\n""INSERT INTO \"Persons\" (\"Name\")\r\nVALUES (@p0)\r\nRETURNING \"Id\";"
+[2022-03-31 19:12:52.460 +05:30 INF]  Executed DbCommand ("21"ms) [Parameters=["@p1='?', @p2='?' (DbType = Int32), @p3='?', @p4='?' (DbType = Int32)"], CommandType='"Text"', CommandTimeout='30']"\r\n""INSERT INTO \"Kids\" (\"KidName\", \"PersonId\")\r\nVALUES (@p1, @p2)\r\nRETURNING \"Id\";\r\nINSERT INTO \"Kids\" (\"KidName\", \"PersonId\")\r\nVALUES (@p3, @p4)\r\nRETURNING \"Id\";"
+[2022-03-31 19:12:52.571 +05:30 INF]  Executing "CreatedAtActionResult", writing value of type '"TestWebApi.Models.Person"'.
+[2022-03-31 19:12:52.694 +05:30 INF]  Executed action "TestWebApi.Controllers.PeopleController.PostPerson (TestWebApi)" in 3822.7218ms
+[2022-03-31 19:12:52.697 +05:30 INF]  Executed endpoint '"TestWebApi.Controllers.PeopleController.PostPerson (TestWebApi)"'
+[2022-03-31 19:12:52.710 +05:30 INF]  Request finished HTTP/2 POST https://localhost:7097/api/People application/json 160 - 201 - application/json;+charset=utf-8 3941.1653ms
