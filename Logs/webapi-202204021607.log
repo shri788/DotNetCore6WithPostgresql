@@ -1,0 +1,20 @@
+[2022-04-02 16:07:10.762 +05:30 INF]  Now listening on: "https://localhost:7097"
+[2022-04-02 16:07:10.848 +05:30 INF]  Now listening on: "http://localhost:5097"
+[2022-04-02 16:07:10.863 +05:30 INF]  Application started. Press Ctrl+C to shut down.
+[2022-04-02 16:07:10.867 +05:30 INF]  Hosting environment: "Development"
+[2022-04-02 16:07:10.870 +05:30 INF]  Content root path: "D:\\dot net\\TestWebApi\\TestWebApi\\"
+[2022-04-02 16:07:12.367 +05:30 INF]  Request starting HTTP/2 GET https://localhost:7097/swagger/index.html - -
+[2022-04-02 16:07:12.942 +05:30 INF]  Request finished HTTP/2 GET https://localhost:7097/swagger/index.html - - - 200 - text/html;charset=utf-8 583.1933ms
+[2022-04-02 16:07:13.007 +05:30 INF]  Request starting HTTP/2 GET https://localhost:7097/_framework/aspnetcore-browser-refresh.js - -
+[2022-04-02 16:07:13.018 +05:30 INF]  Request finished HTTP/2 GET https://localhost:7097/_framework/aspnetcore-browser-refresh.js - - - 200 11978 application/javascript;+charset=utf-8 10.8567ms
+[2022-04-02 16:07:13.257 +05:30 INF]  Request starting HTTP/2 GET https://localhost:7097/swagger/v1/swagger.json - -
+[2022-04-02 16:07:13.458 +05:30 INF]  Request finished HTTP/2 GET https://localhost:7097/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 200.5119ms
+[2022-04-02 16:07:31.700 +05:30 INF]  Request starting HTTP/2 PUT https://localhost:7097/api/People/2 application/json 103
+[2022-04-02 16:07:31.716 +05:30 INF]  Executing endpoint '"TestWebApi.Controllers.PeopleController.PutPerson (TestWebApi)"'
+[2022-04-02 16:07:31.773 +05:30 INF]  Route matched with "{action = \"PutPerson\", controller = \"People\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PutPerson(Int32, TestWebApi.Models.Person)" on controller "TestWebApi.Controllers.PeopleController" ("TestWebApi").
+[2022-04-02 16:07:33.805 +05:30 INF]  Entity Framework Core "6.0.3" initialized '"UserDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f"' with options: "None"
+[2022-04-02 16:07:35.100 +05:30 INF]  Executed DbCommand ("122"ms) [Parameters=["@__person_Id_0='?' (DbType = Int32)"], CommandType='"Text"', CommandTimeout='30']"\r\n""SELECT t.\"Id\", t.\"Name\", k.\"Id\", k.\"KidName\", k.\"PersonId\"\r\nFROM (\r\n    SELECT p.\"Id\", p.\"Name\"\r\n    FROM \"Persons\" AS p\r\n    WHERE p.\"Id\" = @__person_Id_0\r\n    LIMIT 1\r\n) AS t\r\nLEFT JOIN \"Kids\" AS k ON t.\"Id\" = k.\"PersonId\"\r\nORDER BY t.\"Id\""
+[2022-04-02 16:07:35.286 +05:30 INF]  Executing "OkObjectResult", writing value of type '"TestWebApi.Models.Kid"'.
+[2022-04-02 16:07:35.305 +05:30 INF]  Executed action "TestWebApi.Controllers.PeopleController.PutPerson (TestWebApi)" in 3520.7196ms
+[2022-04-02 16:07:35.306 +05:30 INF]  Executed endpoint '"TestWebApi.Controllers.PeopleController.PutPerson (TestWebApi)"'
+[2022-04-02 16:07:35.316 +05:30 INF]  Request finished HTTP/2 PUT https://localhost:7097/api/People/2 application/json 103 - 200 - application/json;+charset=utf-8 3616.9960ms

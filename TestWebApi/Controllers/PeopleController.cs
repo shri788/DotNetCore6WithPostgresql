@@ -65,10 +65,11 @@ namespace TestWebApi.Controllers
                     _context.Kids.Remove(childObj);
                 }
                 // update existing and insert
-                foreach(var childModel in parentObj.Kids)
+                foreach(var childModel in person.Kids)
                 {
                     var existingChild = parentObj.Kids.Where(a => a.Id == childModel.Id 
                     && a.Id != default(int)).SingleOrDefault();
+                    
                     if (existingChild != null)
                     {
                         _context.Entry(existingChild).CurrentValues.SetValues(childModel);
@@ -83,8 +84,9 @@ namespace TestWebApi.Controllers
                     }
                 }
             }
-            //_context.SaveChanges();
-            try
+            _context.SaveChanges();
+            return Ok(parentObj);
+           /* try
             {
                 await _context.SaveChangesAsync();
                 return Ok(parentObj);
@@ -100,7 +102,7 @@ namespace TestWebApi.Controllers
                     throw;
                 }
             }
-
+           */
             //return NoContent();
         }
 

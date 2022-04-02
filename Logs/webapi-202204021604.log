@@ -1,0 +1,12 @@
+[2022-04-02 16:04:00.131 +05:30 INF]  Request starting HTTP/2 GET https://localhost:7097/swagger/v1/swagger.json - -
+[2022-04-02 16:04:00.658 +05:30 INF]  Request finished HTTP/2 GET https://localhost:7097/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 526.2957ms
+[2022-04-02 16:04:27.253 +05:30 INF]  Request starting HTTP/2 PUT https://localhost:7097/api/People/2 application/json 105
+[2022-04-02 16:04:27.263 +05:30 INF]  Executing endpoint '"TestWebApi.Controllers.PeopleController.PutPerson (TestWebApi)"'
+[2022-04-02 16:04:27.321 +05:30 INF]  Route matched with "{action = \"PutPerson\", controller = \"People\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PutPerson(Int32, TestWebApi.Models.Person)" on controller "TestWebApi.Controllers.PeopleController" ("TestWebApi").
+[2022-04-02 16:04:29.467 +05:30 INF]  Entity Framework Core "6.0.3" initialized '"UserDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f"' with options: "None"
+[2022-04-02 16:04:30.819 +05:30 INF]  Executed DbCommand ("119"ms) [Parameters=["@__person_Id_0='?' (DbType = Int32)"], CommandType='"Text"', CommandTimeout='30']"\r\n""SELECT t.\"Id\", t.\"Name\", k.\"Id\", k.\"KidName\", k.\"PersonId\"\r\nFROM (\r\n    SELECT p.\"Id\", p.\"Name\"\r\n    FROM \"Persons\" AS p\r\n    WHERE p.\"Id\" = @__person_Id_0\r\n    LIMIT 1\r\n) AS t\r\nLEFT JOIN \"Kids\" AS k ON t.\"Id\" = k.\"PersonId\"\r\nORDER BY t.\"Id\""
+[2022-04-02 16:04:31.159 +05:30 INF]  Executed DbCommand ("13"ms) [Parameters=["@p1='?' (DbType = Int32), @p0='?'"], CommandType='"Text"', CommandTimeout='30']"\r\n""UPDATE \"Persons\" SET \"Name\" = @p0\r\nWHERE \"Id\" = @p1;"
+[2022-04-02 16:04:31.196 +05:30 INF]  Executing "OkObjectResult", writing value of type '"TestWebApi.Models.Person"'.
+[2022-04-02 16:04:31.218 +05:30 INF]  Executed action "TestWebApi.Controllers.PeopleController.PutPerson (TestWebApi)" in 3884.5902ms
+[2022-04-02 16:04:31.219 +05:30 INF]  Executed endpoint '"TestWebApi.Controllers.PeopleController.PutPerson (TestWebApi)"'
+[2022-04-02 16:04:31.227 +05:30 INF]  Request finished HTTP/2 PUT https://localhost:7097/api/People/2 application/json 105 - 200 - application/json;+charset=utf-8 3974.0455ms

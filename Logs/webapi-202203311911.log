@@ -1,1 +1,0 @@
-[2022-03-31 19:11:51.861 +05:30 INF]  Entity Framework Core "6.0.3" initialized '"UserDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f"' with options: "None"
