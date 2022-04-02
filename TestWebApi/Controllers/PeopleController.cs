@@ -121,7 +121,14 @@ namespace TestWebApi.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeletePerson(int id)
         {
-            var person = await _context.Persons.FindAsync(id);
+            var person = _context.Persons.Where(x => x.Id == id)
+                .Include(a => a.Kids).FirstOrDefault();
+
+            foreach(var child in person.Kids)
+            {
+                _context.Kids.Remove(child);
+            }
+            
             if (person == null)
             {
                 return NotFound();
@@ -129,8 +136,7 @@ namespace TestWebApi.Controllers
 
             _context.Persons.Remove(person);
             await _context.SaveChangesAsync();
-
-            return NoContent();
+            return Ok("Successfully Deleted");
         }
 
         private bool PersonExists(int id)
