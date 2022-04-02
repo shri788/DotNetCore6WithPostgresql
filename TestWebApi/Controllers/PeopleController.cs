@@ -84,25 +84,8 @@ namespace TestWebApi.Controllers
                     }
                 }
             }
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
             return Ok(parentObj);
-           /* try
-            {
-                await _context.SaveChangesAsync();
-                return Ok(parentObj);
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!PersonExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-           */
             //return NoContent();
         }
 
@@ -123,20 +106,17 @@ namespace TestWebApi.Controllers
         {
             var person = _context.Persons.Where(x => x.Id == id)
                 .Include(a => a.Kids).FirstOrDefault();
-
-            foreach(var child in person.Kids)
-            {
-                _context.Kids.Remove(child);
-            }
-            
             if (person == null)
             {
                 return NotFound();
             }
-
+            foreach (var child in person.Kids)
+            {
+                _context.Kids.Remove(child);
+            }
             _context.Persons.Remove(person);
             await _context.SaveChangesAsync();
-            return Ok("Successfully Deleted");
+            return Ok("Successfully Deleted ID : " + id);
         }
 
         private bool PersonExists(int id)

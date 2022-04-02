@@ -1,9 +1,0 @@
-[2022-03-31 20:14:44.986 +05:30 INF]  Request starting HTTP/2 PUT https://localhost:7097/api/People/2 application/json 109
-[2022-03-31 20:14:45.005 +05:30 INF]  Executing endpoint '"TestWebApi.Controllers.PeopleController.PutPerson (TestWebApi)"'
-[2022-03-31 20:14:45.014 +05:30 INF]  Route matched with "{action = \"PutPerson\", controller = \"People\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PutPerson(Int32, TestWebApi.Models.Person)" on controller "TestWebApi.Controllers.PeopleController" ("TestWebApi").
-[2022-03-31 20:14:45.136 +05:30 INF]  Entity Framework Core "6.0.3" initialized '"UserDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f"' with options: "None"
-[2022-03-31 20:14:45.329 +05:30 INF]  Executed DbCommand ("11"ms) [Parameters=["@p1='?' (DbType = Int32), @p0='?'"], CommandType='"Text"', CommandTimeout='30']"\r\n""UPDATE \"Persons\" SET \"Name\" = @p0\r\nWHERE \"Id\" = @p1;"
-[2022-03-31 20:14:45.381 +05:30 INF]  Executing StatusCodeResult, setting HTTP status code 204
-[2022-03-31 20:14:45.382 +05:30 INF]  Executed action "TestWebApi.Controllers.PeopleController.PutPerson (TestWebApi)" in 367.5543ms
-[2022-03-31 20:14:45.383 +05:30 INF]  Executed endpoint '"TestWebApi.Controllers.PeopleController.PutPerson (TestWebApi)"'
-[2022-03-31 20:14:45.384 +05:30 INF]  Request finished HTTP/2 PUT https://localhost:7097/api/People/2 application/json 109 - 204 - - 397.8184ms
