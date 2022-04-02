@@ -1,0 +1,14 @@
+[2022-04-02 15:30:20.093 +05:30 INF]  Now listening on: "https://localhost:7097"
+[2022-04-02 15:30:20.301 +05:30 INF]  Now listening on: "http://localhost:5097"
+[2022-04-02 15:30:20.324 +05:30 INF]  Application started. Press Ctrl+C to shut down.
+[2022-04-02 15:30:20.331 +05:30 INF]  Hosting environment: "Development"
+[2022-04-02 15:30:20.336 +05:30 INF]  Content root path: "D:\\dot net\\TestWebApi\\TestWebApi\\"
+[2022-04-02 15:30:21.919 +05:30 INF]  Request starting HTTP/2 GET https://localhost:7097/swagger/index.html - -
+[2022-04-02 15:30:22.702 +05:30 INF]  Request starting HTTP/2 GET https://localhost:7097/_framework/aspnetcore-browser-refresh.js - -
+[2022-04-02 15:30:22.726 +05:30 INF]  Request finished HTTP/2 GET https://localhost:7097/swagger/index.html - - - 200 - text/html;charset=utf-8 821.0805ms
+[2022-04-02 15:30:22.726 +05:30 INF]  Request finished HTTP/2 GET https://localhost:7097/_framework/aspnetcore-browser-refresh.js - - - 200 11978 application/javascript;+charset=utf-8 21.0055ms
+[2022-04-02 15:30:23.023 +05:30 INF]  Request starting HTTP/2 GET https://localhost:7097/swagger/v1/swagger.json - -
+[2022-04-02 15:30:23.339 +05:30 INF]  Request finished HTTP/2 GET https://localhost:7097/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 315.3404ms
+[2022-04-02 15:30:57.923 +05:30 INF]  Request starting HTTP/2 GET https://localhost:7097/api/People - -
+[2022-04-02 15:30:57.943 +05:30 INF]  Executing endpoint '"TestWebApi.Controllers.PeopleController.GetPersons (TestWebApi)"'
+[2022-04-02 15:30:57.987 +05:30 INF]  Route matched with "{action = \"GetPersons\", controller = \"People\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[TestWebApi.Models.Person]]] GetPersons()" on controller "TestWebApi.Controllers.PeopleController" ("TestWebApi").

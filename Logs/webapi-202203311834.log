@@ -1,6 +1,0 @@
-[2022-03-31 18:34:00.693 +05:30 INF]  Request starting HTTP/2 GET https://localhost:7097/swagger/index.html - -
-[2022-03-31 18:34:01.808 +05:30 INF]  Request finished HTTP/2 GET https://localhost:7097/swagger/index.html - - - 200 - text/html;charset=utf-8 1124.2527ms
-[2022-03-31 18:34:01.930 +05:30 INF]  Request starting HTTP/2 GET https://localhost:7097/_framework/aspnetcore-browser-refresh.js - -
-[2022-03-31 18:34:01.950 +05:30 INF]  Request finished HTTP/2 GET https://localhost:7097/_framework/aspnetcore-browser-refresh.js - - - 200 11978 application/javascript;+charset=utf-8 20.5200ms
-[2022-03-31 18:34:02.309 +05:30 INF]  Request starting HTTP/2 GET https://localhost:7097/swagger/v1/swagger.json - -
-[2022-03-31 18:34:02.674 +05:30 INF]  Request finished HTTP/2 GET https://localhost:7097/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 364.5087ms

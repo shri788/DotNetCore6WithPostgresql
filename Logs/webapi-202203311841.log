@@ -1,7 +1,0 @@
-[2022-03-31 18:41:25.837 +05:30 INF]  Request starting HTTP/2 POST https://localhost:7097/api/Students application/json 219
-[2022-03-31 18:41:25.850 +05:30 INF]  Executing endpoint '"TestWebApi.Controllers.StudentsController.PostStudent (TestWebApi)"'
-[2022-03-31 18:41:25.851 +05:30 INF]  Route matched with "{action = \"PostStudent\", controller = \"Students\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TestWebApi.Models.Student]] PostStudent(TestWebApi.Models.Student)" on controller "TestWebApi.Controllers.StudentsController" ("TestWebApi").
-[2022-03-31 18:41:25.862 +05:30 INF]  Executing "BadRequestObjectResult", writing value of type '"Microsoft.AspNetCore.Mvc.ValidationProblemDetails"'.
-[2022-03-31 18:41:25.866 +05:30 INF]  Executed action "TestWebApi.Controllers.StudentsController.PostStudent (TestWebApi)" in 14.5721ms
-[2022-03-31 18:41:25.867 +05:30 INF]  Executed endpoint '"TestWebApi.Controllers.StudentsController.PostStudent (TestWebApi)"'
-[2022-03-31 18:41:25.868 +05:30 INF]  Request finished HTTP/2 POST https://localhost:7097/api/Students application/json 219 - 400 - application/problem+json;+charset=utf-8 32.3281ms

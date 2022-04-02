@@ -50,12 +50,44 @@ namespace TestWebApi.Controllers
             {
                 return BadRequest();
             }
-
-            _context.Entry(person).State = EntityState.Modified;
-
+            //_context.Entry(person).State = EntityState.Modified;
+            var parentObj = _context.Persons.Where(a => a.Id == person.Id)
+                .Include(b => b.Kids).FirstOrDefault();
+            if (parentObj != null)
+            {
+                _context.Entry(parentObj).CurrentValues.SetValues(person);
+            }
+            foreach(var childObj in parentObj.Kids.ToList())
+            {
+                // delete old those not in array child
+                if (!person.Kids.Any(a => a.Id == childObj.Id))
+                {
+                    _context.Kids.Remove(childObj);
+                }
+                // update existing and insert
+                foreach(var childModel in parentObj.Kids)
+                {
+                    var existingChild = parentObj.Kids.Where(a => a.Id == childModel.Id 
+                    && a.Id != default(int)).SingleOrDefault();
+                    if (existingChild != null)
+                    {
+                        _context.Entry(existingChild).CurrentValues.SetValues(childModel);
+                    }
+                    else
+                    {
+                        var newChildModel = new Kid
+                        {
+                            KidName = childModel.KidName
+                        };
+                        parentObj.Kids.Add(newChildModel);
+                    }
+                }
+            }
+            //_context.SaveChanges();
             try
             {
                 await _context.SaveChangesAsync();
+                return Ok(parentObj);
             }
             catch (DbUpdateConcurrencyException)
             {
@@ -69,7 +101,7 @@ namespace TestWebApi.Controllers
                 }
             }
 
-            return NoContent();
+            //return NoContent();
         }
 
         // POST: api/People
