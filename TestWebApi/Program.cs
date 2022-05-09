@@ -25,7 +25,7 @@ builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
-    c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
+    //c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
 });
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 var app = builder.Build();

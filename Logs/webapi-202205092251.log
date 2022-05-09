@@ -1,0 +1,18 @@
+[2022-05-09 22:51:14.158 +05:30 INF]  Now listening on: "https://localhost:7097"
+[2022-05-09 22:51:14.212 +05:30 INF]  Now listening on: "http://localhost:5097"
+[2022-05-09 22:51:14.222 +05:30 INF]  Application started. Press Ctrl+C to shut down.
+[2022-05-09 22:51:14.224 +05:30 INF]  Hosting environment: "Development"
+[2022-05-09 22:51:14.227 +05:30 INF]  Content root path: "D:\\dot net\\TestWebApi\\TestWebApi\\"
+[2022-05-09 22:51:15.914 +05:30 INF]  Request starting HTTP/2 GET https://localhost:7097/swagger/index.html - -
+[2022-05-09 22:51:16.805 +05:30 INF]  Request finished HTTP/2 GET https://localhost:7097/swagger/index.html - - - 200 - text/html;charset=utf-8 907.1274ms
+[2022-05-09 22:51:16.876 +05:30 INF]  Request starting HTTP/2 GET https://localhost:7097/_framework/aspnetcore-browser-refresh.js - -
+[2022-05-09 22:51:16.923 +05:30 INF]  Request finished HTTP/2 GET https://localhost:7097/_framework/aspnetcore-browser-refresh.js - - - 200 11978 application/javascript;+charset=utf-8 46.4142ms
+[2022-05-09 22:51:17.346 +05:30 INF]  Request starting HTTP/2 GET https://localhost:7097/swagger/v1/swagger.json - -
+[2022-05-09 22:51:17.846 +05:30 INF]  Request finished HTTP/2 GET https://localhost:7097/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 500.5065ms
+[2022-05-09 22:51:36.130 +05:30 INF]  Request starting HTTP/2 POST https://localhost:7097/api/People/fileUpload multipart/form-data;+boundary=----WebKitFormBoundaryaaRzgIoaN8R5DOw8 149142
+[2022-05-09 22:51:36.141 +05:30 INF]  Executing endpoint '"TestWebApi.Controllers.PeopleController.postFile (TestWebApi)"'
+[2022-05-09 22:51:36.191 +05:30 INF]  Route matched with "{action = \"postFile\", controller = \"People\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] postFile(Microsoft.AspNetCore.Http.IFormFile)" on controller "TestWebApi.Controllers.PeopleController" ("TestWebApi").
+[2022-05-09 22:51:36.744 +05:30 INF]  Executing "OkObjectResult", writing value of type '"System.String"'.
+[2022-05-09 22:51:36.756 +05:30 INF]  Executed action "TestWebApi.Controllers.PeopleController.postFile (TestWebApi)" in 556.6553ms
+[2022-05-09 22:51:36.757 +05:30 INF]  Executed endpoint '"TestWebApi.Controllers.PeopleController.postFile (TestWebApi)"'
+[2022-05-09 22:51:36.763 +05:30 INF]  Request finished HTTP/2 POST https://localhost:7097/api/People/fileUpload multipart/form-data;+boundary=----WebKitFormBoundaryaaRzgIoaN8R5DOw8 149142 - 200 - text/plain;+charset=utf-8 633.3711ms

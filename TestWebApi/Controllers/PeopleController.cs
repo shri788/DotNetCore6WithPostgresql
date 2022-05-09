@@ -29,7 +29,7 @@ namespace TestWebApi.Controllers
         }
         
         // Post: api/People
-        [HttpPost]
+        [HttpPost("fileUpload")]
         public async Task<IActionResult> postFile(IFormFile file)
         {
             string path = Path.Combine(Directory.GetCurrentDirectory(), "Files/Uploaded");
