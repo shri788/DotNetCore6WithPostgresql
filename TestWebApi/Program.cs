@@ -23,7 +23,10 @@ builder.Services.AddDbContext<UserDbContext>(opt =>
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
+});
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 var app = builder.Build();
 

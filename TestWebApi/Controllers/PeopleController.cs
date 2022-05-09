@@ -27,6 +27,28 @@ namespace TestWebApi.Controllers
         {
             return await _context.Persons.Include(a => a.Kids).ToListAsync();
         }
+        
+        // Post: api/People
+        [HttpPost]
+        public async Task<IActionResult> postFile(IFormFile file)
+        {
+            string path = Path.Combine(Directory.GetCurrentDirectory(), "Files/Uploaded");
+            if (!Directory.Exists(path))
+            {
+                Directory.CreateDirectory(path);
+            }
+            FileInfo fileInfo = new FileInfo(file.FileName);
+            string fileName = file.FileName + fileInfo.Extension;
+
+            string fileNameWithPath = Path.Combine(path, fileName);
+
+            using(var stream = new FileStream(fileNameWithPath, FileMode.Create))
+            {
+              file.CopyTo(stream);
+            }
+            return Ok("File Uploaded Successfully");
+        }
+
 
         // GET: api/People/5
         [HttpGet("{id}")]

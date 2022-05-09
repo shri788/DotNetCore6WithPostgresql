@@ -1,0 +1,18 @@
+[2022-05-09 22:42:05.505 +05:30 INF]  Now listening on: "https://localhost:7097"
+[2022-05-09 22:42:05.698 +05:30 INF]  Now listening on: "http://localhost:5097"
+[2022-05-09 22:42:05.711 +05:30 INF]  Application started. Press Ctrl+C to shut down.
+[2022-05-09 22:42:05.714 +05:30 INF]  Hosting environment: "Development"
+[2022-05-09 22:42:05.717 +05:30 INF]  Content root path: "D:\\dot net\\TestWebApi\\TestWebApi\\"
+[2022-05-09 22:42:06.961 +05:30 INF]  Request starting HTTP/2 GET https://localhost:7097/swagger/index.html - -
+[2022-05-09 22:42:07.659 +05:30 INF]  Request finished HTTP/2 GET https://localhost:7097/swagger/index.html - - - 200 - text/html;charset=utf-8 701.3665ms
+[2022-05-09 22:42:07.669 +05:30 INF]  Request starting HTTP/2 GET https://localhost:7097/_framework/aspnetcore-browser-refresh.js - -
+[2022-05-09 22:42:07.678 +05:30 INF]  Request finished HTTP/2 GET https://localhost:7097/_framework/aspnetcore-browser-refresh.js - - - 200 11978 application/javascript;+charset=utf-8 8.7492ms
+[2022-05-09 22:42:08.298 +05:30 INF]  Request starting HTTP/2 GET https://localhost:7097/swagger/v1/swagger.json - -
+[2022-05-09 22:42:08.570 +05:30 ERR]  An unhandled exception has occurred while executing the request.Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "POST api/People" for actions - TestWebApi.Controllers.PeopleController.postFile (TestWebApi),TestWebApi.Controllers.PeopleController.PostPerson (TestWebApi). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+
+[2022-05-09 22:42:08.595 +05:30 INF]  Request finished HTTP/2 GET https://localhost:7097/swagger/v1/swagger.json - - - 500 - text/plain;+charset=utf-8 296.6126ms

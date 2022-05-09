@@ -1,0 +1,30 @@
+[2022-05-09 22:39:21.404 +05:30 INF]  Now listening on: "https://localhost:7097"
+[2022-05-09 22:39:21.493 +05:30 INF]  Now listening on: "http://localhost:5097"
+[2022-05-09 22:39:21.517 +05:30 INF]  Application started. Press Ctrl+C to shut down.
+[2022-05-09 22:39:21.521 +05:30 INF]  Hosting environment: "Development"
+[2022-05-09 22:39:21.525 +05:30 INF]  Content root path: "D:\\dot net\\TestWebApi\\TestWebApi\\"
+[2022-05-09 22:39:23.483 +05:30 INF]  Request starting HTTP/2 GET https://localhost:7097/swagger/index.html - -
+[2022-05-09 22:39:24.806 +05:30 INF]  Request finished HTTP/2 GET https://localhost:7097/swagger/index.html - - - 200 - text/html;charset=utf-8 1332.4421ms
+[2022-05-09 22:39:24.851 +05:30 INF]  Request starting HTTP/2 GET https://localhost:7097/_framework/aspnetcore-browser-refresh.js - -
+[2022-05-09 22:39:24.861 +05:30 INF]  Request starting HTTP/2 GET https://localhost:7097/swagger/swagger-ui-standalone-preset.js - -
+[2022-05-09 22:39:24.863 +05:30 INF]  Request starting HTTP/2 GET https://localhost:7097/swagger/swagger-ui.css - -
+[2022-05-09 22:39:24.863 +05:30 INF]  Request starting HTTP/2 GET https://localhost:7097/swagger/swagger-ui-bundle.js - -
+[2022-05-09 22:39:24.878 +05:30 INF]  Request finished HTTP/2 GET https://localhost:7097/_framework/aspnetcore-browser-refresh.js - - - 200 11978 application/javascript;+charset=utf-8 17.7392ms
+[2022-05-09 22:39:24.911 +05:30 INF]  The file "/swagger-ui-standalone-preset.js" was not modified
+[2022-05-09 22:39:24.911 +05:30 INF]  The file "/swagger-ui-bundle.js" was not modified
+[2022-05-09 22:39:24.911 +05:30 INF]  The file "/swagger-ui.css" was not modified
+[2022-05-09 22:39:24.912 +05:30 INF]  Request finished HTTP/2 GET https://localhost:7097/swagger/swagger-ui-standalone-preset.js - - - 304 - application/javascript 50.8018ms
+[2022-05-09 22:39:24.912 +05:30 INF]  Request finished HTTP/2 GET https://localhost:7097/swagger/swagger-ui-bundle.js - - - 304 - application/javascript 48.5437ms
+[2022-05-09 22:39:24.912 +05:30 INF]  Request finished HTTP/2 GET https://localhost:7097/swagger/swagger-ui.css - - - 304 - text/css 56.1856ms
+[2022-05-09 22:39:26.065 +05:30 INF]  Request starting HTTP/2 GET https://localhost:7097/swagger/v1/swagger.json - -
+[2022-05-09 22:39:26.259 +05:30 INF]  Request starting HTTP/2 GET https://localhost:7097/swagger/favicon-32x32.png - -
+[2022-05-09 22:39:26.260 +05:30 INF]  The file "/favicon-32x32.png" was not modified
+[2022-05-09 22:39:26.261 +05:30 INF]  Request finished HTTP/2 GET https://localhost:7097/swagger/favicon-32x32.png - - - 304 - image/png 1.8081ms
+[2022-05-09 22:39:27.143 +05:30 ERR]  An unhandled exception has occurred while executing the request.Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "POST api/People" for actions - TestWebApi.Controllers.PeopleController.postFile (TestWebApi),TestWebApi.Controllers.PeopleController.PostPerson (TestWebApi). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+
+[2022-05-09 22:39:27.295 +05:30 INF]  Request finished HTTP/2 GET https://localhost:7097/swagger/v1/swagger.json - - - 500 - text/plain;+charset=utf-8 1229.5349ms
